@@ -24,6 +24,7 @@ return {
 				},
 				-- ensure these language parsers are installed
 				ensure_installed = {
+					"java",
 					"json",
 					"javascript",
 					"typescript",
@@ -42,6 +43,11 @@ return {
 					"dockerfile",
 					"gitignore",
 					"query",
+					"vimdoc",
+					"luadoc",
+					"vim",
+					"lua",
+					"regex",
 				},
 				incremental_selection = {
 					enable = true,

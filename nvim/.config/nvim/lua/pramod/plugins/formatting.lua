@@ -15,11 +15,13 @@ return {
 				css = { "prettier" },
 				html = { "prettier" },
 				json = { "prettier" },
+				java = { "google-java-format" },
 				yaml = { "prettier" },
 				markdown = { "prettier" },
 				graphql = { "prettier" },
 				lua = { "stylua" },
 				python = { "isort", "black" },
+				sh = { "shfmt" },
 			},
 			format_on_save = {
 				lsp_fallback = true,
@@ -28,7 +30,7 @@ return {
 			},
 		})
 
-		vim.keymap.set({ "n", "v" }, "<leader>mp", function()
+		vim.keymap.set({ "n", "v" }, "==", function()
 			conform.format({
 				lsp_fallback = true,
 				async = false,

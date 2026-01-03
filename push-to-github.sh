@@ -1,9 +1,10 @@
 #!/bin/bash
 # Script to push all local vimrc,ideavimrc,bashrc,custom commands to git repo
-set -ex
+set -e
 
-#copying shell/terminal config 
+#copying shell/terminal config
 cp ~/.zshrc ./terminal
+cp ~/.zprofile ./terminal
 
 # copying vim config
 cp ~/.vimrc ./vim
@@ -18,21 +19,25 @@ cp -rf ~/.config/nvim/** ./nvim/.config/nvim/
 cp ~/.tmux.conf ./tmux
 
 # copying custom commands
-cp ~/custom-commands/* ./custom-commands/ 
+cp ~/custom-commands/* ./custom-commands/
 
 #git checkout develop
 
 git status
 
-read -p "Do you wish to push(y/n)" ans 
+read -p "Do you wish to push(y/n)" ans
 
-if [[ $ans == "y" ]]
-then
-	git add .
-	git status
-	git commit -m "auto push"
-	git push 
-	echo "update & pushed"
-else
-	echo "Exiting gracefully"
+if [[ $ans == "y" || $ans == "Y" ]]; then
+  git add .
+  git status
+
+  read -p "What would be the commit message?: " cmsg
+  if [[ -n $cmsg ]]; then
+    git commit -m "$cmsg"
+    git push
+    echo "update & pushed"
+  else
+    echo "Please set commit message"
+  fi
+
 fi
