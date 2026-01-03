@@ -106,14 +106,14 @@
 
 ## For beginner setup guide
 
-### Terminal guide `./terminal/terminal-setup.md`
-
-### Nvim guide `./nvim/nvim-setup.md`
-
-### tmux guide `./tmux/tmux-setup.md`
+### Terminal guide 
+[Click here](./terminal/README.md) for nvim guide
+### Nvim guide 
+[Click here](./nvim/README.md) for nvim guide
+### tmux guide 
+[Click here](./tmux/README.md) for tmux guide
 
 [Reference guide](https://github.com/josean-dev/dev-environment-files)
-
 ### Other helpful links
 
 [LSP servers](https://github.com/williamboman/mason-lspconfig.nvim)
