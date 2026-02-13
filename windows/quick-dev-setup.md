@@ -1,4 +1,5 @@
 ## Quick windows setup
+
 This guide you the initial quick setup and tools required for development
 
 **Below are the tools basically will need**
@@ -16,31 +17,33 @@ This guide you the initial quick setup and tools required for development
 ### Installation steps
 
 1. Install WSL & Distro(ubuntu) latest
-    - Open PowerShell as administrator 
-    - run `wsl --install`
-    - check `wsl --status`
-    - List of available distro `wsl --list --online`
-    - Install distro, in our case is ubuntu `wsl --install -d <distro-name>`
+   - Open PowerShell as administrator
+   - run `wsl --install`
+   - check `wsl --status`
+   - List of available distro `wsl --list --online`
+   - Install distro, in our case is ubuntu `wsl --install -d <distro-name>`
 2. Install windows terminal going link mentioned above
-3. Install ohmyzsh
-     - Now your file is `.zshrc`
-     - configure plugins below
+3. Install ohmyzsh - Now your file is `.zshrc` - configure plugins below
    ```
    plugins=(
     fzf
     git
-    zsh-autosuggestions 
-    zsh-syntax-highlighting 
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    zsh-autopair
     web-search
     )
    ```
-4.Install fzf and put this at last of `.zshrc`
+   4.Install fzf and put this at last of `.zshrc`
+
 ```
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 ```
+
 5.Install tmux
-   - After installation use the [config](../tmux/.tmux.conf)
-   - You will face issue during pane navigation with vim/nvim `ctrl + j/h/k/l`. for this install `'christoomey/vim-tmux-navigator'`plugin in vim/nvim 
+
+- After installation use the [config](../tmux/.tmux.conf)
+- You will face issue during pane navigation with vim/nvim `ctrl + j/h/k/l`. for this install `'christoomey/vim-tmux-navigator'`plugin in vim/nvim
 
 6.For `azure-cli, kubectl, podman`you can install if you require this.podman is the alternative for docker
-   
+
